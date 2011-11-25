@@ -1,0 +1,333 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E57E52B0147F91D800D6CD90 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57E52AF147F91D800D6CD90 /* Cocoa.framework */; };
+		E57E52B2147F91D800D6CD90 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57E52B1147F91D800D6CD90 /* MacRuby.framework */; };
+		E57E52B9147F91D800D6CD90 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E57E52B7147F91D800D6CD90 /* InfoPlist.strings */; };
+		E57E52BB147F91D800D6CD90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E57E52BA147F91D800D6CD90 /* main.m */; };
+		E57E52C0147F91D800D6CD90 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E57E52BE147F91D800D6CD90 /* MainMenu.xib */; };
+		E57E52C3147F91D800D6CD90 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = E57E52C2147F91D800D6CD90 /* rb_main.rb */; };
+		E57E52C5147F91D800D6CD90 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = E57E52C4147F91D800D6CD90 /* AppDelegate.rb */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E57E52AB147F91D800D6CD90 /* CookieInspector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookieInspector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E57E52AF147F91D800D6CD90 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E57E52B1147F91D800D6CD90 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
+		E57E52B6147F91D800D6CD90 /* CookieInspector-Info.plist */ = {isa = PBXFileReference; path = "CookieInspector-Info.plist"; sourceTree = "<group>"; };
+		E57E52B8147F91D800D6CD90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E57E52BA147F91D800D6CD90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E57E52BC147F91D800D6CD90 /* CookieInspector-Prefix.pch */ = {isa = PBXFileReference; path = "CookieInspector-Prefix.pch"; sourceTree = "<group>"; };
+		E57E52BF147F91D800D6CD90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E57E52C2147F91D800D6CD90 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
+		E57E52C4147F91D800D6CD90 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E57E52A8147F91D800D6CD90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E57E52B0147F91D800D6CD90 /* Cocoa.framework in Frameworks */,
+				E57E52B2147F91D800D6CD90 /* MacRuby.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E57E52A0147F91D700D6CD90 = {
+			isa = PBXGroup;
+			children = (
+				E57E52B4147F91D800D6CD90 /* CookieInspector */,
+				E57E52AE147F91D800D6CD90 /* Frameworks */,
+				E57E52AC147F91D800D6CD90 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E57E52AC147F91D800D6CD90 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E57E52AB147F91D800D6CD90 /* CookieInspector.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E57E52AE147F91D800D6CD90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E57E52AF147F91D800D6CD90 /* Cocoa.framework */,
+				E57E52B1147F91D800D6CD90 /* MacRuby.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E57E52B4147F91D800D6CD90 /* CookieInspector */ = {
+			isa = PBXGroup;
+			children = (
+				E57E52C4147F91D800D6CD90 /* AppDelegate.rb */,
+				E57E52BD147F91D800D6CD90 /* Resources */,
+				E57E52C1147F91D800D6CD90 /* Other Sources */,
+				E57E52B5147F91D800D6CD90 /* Supporting Files */,
+			);
+			path = CookieInspector;
+			sourceTree = "<group>";
+		};
+		E57E52B5147F91D800D6CD90 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E57E52B6147F91D800D6CD90 /* CookieInspector-Info.plist */,
+				E57E52B7147F91D800D6CD90 /* InfoPlist.strings */,
+				E57E52BA147F91D800D6CD90 /* main.m */,
+				E57E52BC147F91D800D6CD90 /* CookieInspector-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E57E52BD147F91D800D6CD90 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E57E52BE147F91D800D6CD90 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E57E52C1147F91D800D6CD90 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E57E52C2147F91D800D6CD90 /* rb_main.rb */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		E57E52B3147F91D800D6CD90 /* Deployment */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--compile --embed";
+			buildConfigurationList = E57E52CB147F91D800D6CD90 /* Build configuration list for PBXLegacyTarget "Deployment" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/macruby_deploy;
+			dependencies = (
+			);
+			name = Deployment;
+			passBuildSettingsInEnvironment = 1;
+			productName = Deployment;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		E57E52AA147F91D800D6CD90 /* CookieInspector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E57E52C8147F91D800D6CD90 /* Build configuration list for PBXNativeTarget "CookieInspector" */;
+			buildPhases = (
+				E57E52A7147F91D800D6CD90 /* Sources */,
+				E57E52A8147F91D800D6CD90 /* Frameworks */,
+				E57E52A9147F91D800D6CD90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CookieInspector;
+			productName = CookieInspector;
+			productReference = E57E52AB147F91D800D6CD90 /* CookieInspector.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E57E52A2147F91D700D6CD90 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = E57E52A5147F91D700D6CD90 /* Build configuration list for PBXProject "CookieInspector" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E57E52A0147F91D700D6CD90;
+			productRefGroup = E57E52AC147F91D800D6CD90 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E57E52AA147F91D800D6CD90 /* CookieInspector */,
+				E57E52B3147F91D800D6CD90 /* Deployment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E57E52A9147F91D800D6CD90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E57E52B9147F91D800D6CD90 /* InfoPlist.strings in Resources */,
+				E57E52C0147F91D800D6CD90 /* MainMenu.xib in Resources */,
+				E57E52C3147F91D800D6CD90 /* rb_main.rb in Resources */,
+				E57E52C5147F91D800D6CD90 /* AppDelegate.rb in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E57E52A7147F91D800D6CD90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E57E52BB147F91D800D6CD90 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E57E52B7147F91D800D6CD90 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E57E52B8147F91D800D6CD90 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E57E52BE147F91D800D6CD90 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E57E52BF147F91D800D6CD90 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E57E52C6147F91D800D6CD90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E57E52C7147F91D800D6CD90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E57E52C9147F91D800D6CD90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CookieInspector/CookieInspector-Prefix.pch";
+				INFOPLIST_FILE = "CookieInspector/CookieInspector-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E57E52CA147F91D800D6CD90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CookieInspector/CookieInspector-Prefix.pch";
+				INFOPLIST_FILE = "CookieInspector/CookieInspector-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E57E52CC147F91D800D6CD90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		E57E52CD147F91D800D6CD90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E57E52A5147F91D700D6CD90 /* Build configuration list for PBXProject "CookieInspector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E57E52C6147F91D800D6CD90 /* Debug */,
+				E57E52C7147F91D800D6CD90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E57E52C8147F91D800D6CD90 /* Build configuration list for PBXNativeTarget "CookieInspector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E57E52C9147F91D800D6CD90 /* Debug */,
+				E57E52CA147F91D800D6CD90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E57E52CB147F91D800D6CD90 /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E57E52CC147F91D800D6CD90 /* Debug */,
+				E57E52CD147F91D800D6CD90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E57E52A2147F91D700D6CD90 /* Project object */;
+}
