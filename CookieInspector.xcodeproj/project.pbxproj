@@ -20,10 +20,10 @@
 		E57E52AB147F91D800D6CD90 /* CookieInspector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookieInspector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57E52AF147F91D800D6CD90 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E57E52B1147F91D800D6CD90 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
-		E57E52B6147F91D800D6CD90 /* CookieInspector-Info.plist */ = {isa = PBXFileReference; path = "CookieInspector-Info.plist"; sourceTree = "<group>"; };
+		E57E52B6147F91D800D6CD90 /* CookieInspector-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CookieInspector-Info.plist"; sourceTree = "<group>"; };
 		E57E52B8147F91D800D6CD90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E57E52BA147F91D800D6CD90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E57E52BC147F91D800D6CD90 /* CookieInspector-Prefix.pch */ = {isa = PBXFileReference; path = "CookieInspector-Prefix.pch"; sourceTree = "<group>"; };
+		E57E52BC147F91D800D6CD90 /* CookieInspector-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CookieInspector-Prefix.pch"; sourceTree = "<group>"; };
 		E57E52BF147F91D800D6CD90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		E57E52C2147F91D800D6CD90 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		E57E52C4147F91D800D6CD90 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
