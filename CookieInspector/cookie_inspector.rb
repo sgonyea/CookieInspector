@@ -5,6 +5,8 @@
 #  Created by Scott Gonyea on 11/28/11.
 #  Copyright 2011 sgonyea inc. All rights reserved.
 #
+require 'nshttp_cookie'
+
 module CookieInspector
   def cookie_store
     NSHTTPCookieStorage.sharedHTTPCookieStorage
