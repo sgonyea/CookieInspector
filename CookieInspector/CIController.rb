@@ -10,7 +10,7 @@ require 'cookie_inspector'
 class CIController
   include CookieInspector
 
-  attr_accessor :cookiesTableView
+  attr_accessor :cookiesTableView, :cookieSearchField
 
   def awakeFromNib
     cookiesTableView.dataSource = self
@@ -63,6 +63,30 @@ class CIController
     reload_data!
   end
 
+  def searchCookies(sender)
+    apply_search_filter
+    reload_data!
+  end
+
+  def apply_search_filter
+    text = cookieSearchField.stringValue
+
+    if text.empty?
+      @cookies_table = _cookies_table
+    else
+      @cookies_table = filter_cookies(text)
+    end
+  end
+
+  def filter_cookies(text)
+    text = Regexp.escape(text)
+    regx = /#{text}/i
+
+    _cookies_table.select do |row|
+      row.values.grep(regx).any?
+    end
+  end
+
   def preserving_selected_rows
     if block_given?
       rows = get_selected_rows
@@ -107,15 +131,31 @@ class CIController
 
   private
   def update_cookies_table!
-    @cookies_table = cookie_table
+    self.cookies_table  = cookie_table
+    self._cookies_table = cookies_table.clone
+
+    cookies_table
+  end
+
+  def cookies_table=(table)
+    @cookies_table = table
+  end
+
+  def _cookies_table
+    @_cookies_table ||= update_cookies_table!
+  end
+
+  def _cookies_table=(table)
+    @_cookies_table = table
   end
 
   def reload_data!
-    self.cookiesTableView.reloadData
+    cookiesTableView.reloadData
   end
 
   def update_and_reload!
     update_cookies_table!
+    apply_search_filter
     reload_data!
   end
 end
