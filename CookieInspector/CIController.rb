@@ -63,20 +63,11 @@ class CIController
   def preserving_selected_rows
     return unless block_given?
 
-    indexes = cookiesTableView.selectedRowIndexes
-    rows    = []
-    block   = proc { |idx, stop| rows << cookies_table[idx] }
-
-    indexes.enumerateIndexesUsingBlock(block)
+    rows = get_selected_rows
 
     yield
 
-    new_indexes = NSMutableIndexSet.new
-    rows.each do |row|
-      index = cookies_table.index(row)
-
-      new_indexes.addIndex index
-    end
+    new_indexes = created_index_set_for_rows(rows)
 
     cookiesTableView.selectRowIndexes new_indexes, byExtendingSelection:false
   end
@@ -105,5 +96,27 @@ class CIController
 
     CookieInspector.delete_cookie(cookie)
     update_and_reload!
+  end
+
+  private
+  def get_selected_rows
+    indexes = cookiesTableView.selectedRowIndexes
+    rows    = []
+    block   = proc { |idx, stop| rows << cookies_table[idx] }
+
+    indexes.enumerateIndexesUsingBlock(block)
+
+    rows
+  end
+
+  def created_index_set_for_rows(rows)
+    new_indexes = NSMutableIndexSet.new
+    rows.each do |row|
+      index = cookies_table.index(row)
+
+      new_indexes.addIndex index
+    end
+
+    new_indexes
   end
 end
