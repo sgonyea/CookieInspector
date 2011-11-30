@@ -10,6 +10,8 @@
 # do that here too.
 framework 'Cocoa'
 
+$:.unshift File.expand_path(File.dirname(__FILE__))
+
 # Loading all the Ruby project files.
 main      = File.basename(__FILE__, File.extname(__FILE__))
 dir_path  = NSBundle.mainBundle.resourcePath.fileSystemRepresentation
