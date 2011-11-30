@@ -39,7 +39,7 @@ class CIController
     row     = cookies_table[index]
     cookie  = row['cookie']
 
-    CookieInspector.delete_cookie(cookie)
+    delete_cookie(cookie)
     update_and_reload!
   end
 
