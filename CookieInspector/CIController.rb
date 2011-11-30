@@ -22,22 +22,25 @@ class CIController
     @cookies_table || update_cookies_table!
   end
 
-  def update_cookies_table!
-    @cookies_table = cookie_table
-  end
-
-  def reload_data!
-    self.cookiesTableView.reloadData
-  end
-
-  def update_and_reload!
-    update_cookies_table!
-    reload_data!
-  end
-
   # numberOfRowsInTableView:
   def numberOfRowsInTableView(view)
     cookies_table.length
+  end
+
+  def reloadCookies(sender)
+    update_and_reload!
+  end
+
+  def deleteCookie(sender)
+    index = cookiesTableView.selectedRow
+
+    return if index < 0
+
+    row     = cookies_table[index]
+    cookie  = row['cookie']
+
+    CookieInspector.delete_cookie(cookie)
+    update_and_reload!
   end
 
   # tableView:objectValueForTableColumn:row
@@ -81,23 +84,6 @@ class CIController
     end
   end
 
-  def reloadCookies(sender)
-    update_and_reload!
-  end
-
-  def deleteCookie(sender)
-    index = cookiesTableView.selectedRow
-
-    return if index < 0
-
-    row     = cookies_table[index]
-    cookie  = row['cookie']
-
-    CookieInspector.delete_cookie(cookie)
-    update_and_reload!
-  end
-
-  private
   def get_selected_rows
     indexes = cookiesTableView.selectedRowIndexes
     rows    = []
@@ -117,5 +103,19 @@ class CIController
     end
 
     new_indexes
+  end
+
+  private
+  def update_cookies_table!
+    @cookies_table = cookie_table
+  end
+
+  def reload_data!
+    self.cookiesTableView.reloadData
+  end
+
+  def update_and_reload!
+    update_cookies_table!
+    reload_data!
   end
 end
