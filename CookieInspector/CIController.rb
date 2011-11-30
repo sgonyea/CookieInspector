@@ -51,7 +51,13 @@ class CIController
   end
 
   def tableView(view, sortDescriptorsDidChange:oldDescriptors)
-    sort_descriptor = view.sortDescriptors.first
+    apply_sort_to_table_view
+  end
+
+  def apply_sort_to_table_view
+    sort_descriptor = cookiesTableView.sortDescriptors.first
+
+    return unless sort_descriptor
 
     key = sort_descriptor.key
     asc = sort_descriptor.ascending
@@ -134,6 +140,9 @@ class CIController
   private
   def update_cookies_table!
     self.cookies_table  = cookie_table
+
+    apply_sort_to_table_view
+
     self._cookies_table = cookies_table.clone
 
     cookies_table
