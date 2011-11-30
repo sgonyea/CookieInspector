@@ -61,15 +61,14 @@ class CIController
   end
 
   def preserving_selected_rows
-    return unless block_given?
+    if block_given?
+      rows = get_selected_rows
 
-    rows = get_selected_rows
+      yield
 
-    yield
-
-    new_indexes = created_index_set_for_rows(rows)
-
-    cookiesTableView.selectRowIndexes new_indexes, byExtendingSelection:false
+      indexes = created_index_set_for_rows(rows)
+      cookiesTableView.selectRowIndexes indexes, byExtendingSelection:false
+    end
   end
 
   def sort_table_at_key(key, asc)
