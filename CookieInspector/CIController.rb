@@ -69,13 +69,15 @@ class CIController
   end
 
   def apply_search_filter
-    text = cookieSearchField.stringValue
+    preserving_selected_rows {
+      text = cookieSearchField.stringValue
 
-    if text.empty?
-      @cookies_table = _cookies_table
-    else
-      @cookies_table = filter_cookies(text)
-    end
+      if text.empty?
+        @cookies_table = _cookies_table
+      else
+        @cookies_table = filter_cookies(text)
+      end
+    }
   end
 
   def filter_cookies(text)
