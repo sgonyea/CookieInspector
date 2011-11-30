@@ -109,8 +109,8 @@
 		E58635C414843B62009298A3 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				E58635C514843B62009298A3 /* rb_main.rb */,
 				E58635D114843BEE009298A3 /* nshttp_cookie.rb */,
+				E58635C514843B62009298A3 /* rb_main.rb */,
 				E58635D314843BF7009298A3 /* nshttp_cookie_storage.rb */,
 				E58635D514843BFF009298A3 /* cookie_inspector.rb */,
 				E58635D714843C07009298A3 /* CIController.rb */,
