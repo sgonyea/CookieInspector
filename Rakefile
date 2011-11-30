@@ -1,3 +1,4 @@
+require 'bundler/setup'
 require 'rspec'
 require 'rspec/core'
 require 'rspec/core/rake_task'
