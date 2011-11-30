@@ -6,8 +6,6 @@
 #  Copyright 2011 sgonyea inc. All rights reserved.
 #
 module CookieInspector
-  extend self
-
   def cookie_store
     NSHTTPCookieStorage.sharedHTTPCookieStorage
   end
@@ -16,7 +14,11 @@ module CookieInspector
     cookie_store.cookies
   end
 
+  def delete_cookie(cookie)
+    cookie_store.deleteCookie(cookie)
+  end
+
   def cookie_table
-    cookie_store.to_table
+    cookies.map(&:to_hash)
   end
 end
