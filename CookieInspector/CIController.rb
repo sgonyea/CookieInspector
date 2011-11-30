@@ -53,14 +53,14 @@ class CIController
     key = sort_descriptor.key
     asc = sort_descriptor.ascending
 
-    preserving_selected_row {
+    preserving_selected_rows {
       sort_table_at_key(key, asc)
     }
 
     reload_data!
   end
 
-  def preserving_selected_row
+  def preserving_selected_rows
     return unless block_given?
 
     indexes = cookiesTableView.selectedRowIndexes
