@@ -7,101 +7,113 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E57E52B0147F91D800D6CD90 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57E52AF147F91D800D6CD90 /* Cocoa.framework */; };
-		E57E52B2147F91D800D6CD90 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57E52B1147F91D800D6CD90 /* MacRuby.framework */; };
-		E57E52B9147F91D800D6CD90 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E57E52B7147F91D800D6CD90 /* InfoPlist.strings */; };
-		E57E52BB147F91D800D6CD90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E57E52BA147F91D800D6CD90 /* main.m */; };
-		E57E52C0147F91D800D6CD90 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E57E52BE147F91D800D6CD90 /* MainMenu.xib */; };
-		E57E52C3147F91D800D6CD90 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = E57E52C2147F91D800D6CD90 /* rb_main.rb */; };
-		E57E52C5147F91D800D6CD90 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = E57E52C4147F91D800D6CD90 /* AppDelegate.rb */; };
+		E58635B314843B61009298A3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E58635B214843B61009298A3 /* Cocoa.framework */; };
+		E58635B514843B61009298A3 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E58635B414843B61009298A3 /* MacRuby.framework */; };
+		E58635BC14843B61009298A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E58635BA14843B61009298A3 /* InfoPlist.strings */; };
+		E58635BE14843B62009298A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E58635BD14843B62009298A3 /* main.m */; };
+		E58635C314843B62009298A3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E58635C114843B62009298A3 /* MainMenu.xib */; };
+		E58635C614843B62009298A3 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = E58635C514843B62009298A3 /* rb_main.rb */; };
+		E58635C814843B62009298A3 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = E58635C714843B62009298A3 /* AppDelegate.rb */; };
+		E58635D214843BEE009298A3 /* nshttp_cookie.rb in Resources */ = {isa = PBXBuildFile; fileRef = E58635D114843BEE009298A3 /* nshttp_cookie.rb */; };
+		E58635D414843BF7009298A3 /* nshttp_cookie_storage.rb in Resources */ = {isa = PBXBuildFile; fileRef = E58635D314843BF7009298A3 /* nshttp_cookie_storage.rb */; };
+		E58635D614843BFF009298A3 /* cookie_inspector.rb in Resources */ = {isa = PBXBuildFile; fileRef = E58635D514843BFF009298A3 /* cookie_inspector.rb */; };
+		E58635D814843C07009298A3 /* CIController.rb in Resources */ = {isa = PBXBuildFile; fileRef = E58635D714843C07009298A3 /* CIController.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E57E52AB147F91D800D6CD90 /* CookieInspector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookieInspector.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E57E52AF147F91D800D6CD90 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		E57E52B1147F91D800D6CD90 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
-		E57E52B6147F91D800D6CD90 /* CookieInspector-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CookieInspector-Info.plist"; sourceTree = "<group>"; };
-		E57E52B8147F91D800D6CD90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E57E52BA147F91D800D6CD90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E57E52BC147F91D800D6CD90 /* CookieInspector-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CookieInspector-Prefix.pch"; sourceTree = "<group>"; };
-		E57E52BF147F91D800D6CD90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		E57E52C2147F91D800D6CD90 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
-		E57E52C4147F91D800D6CD90 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+		E58635AE14843B61009298A3 /* CookieInspector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookieInspector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E58635B214843B61009298A3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E58635B414843B61009298A3 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
+		E58635B914843B61009298A3 /* CookieInspector-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CookieInspector-Info.plist"; sourceTree = "<group>"; };
+		E58635BB14843B61009298A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E58635BD14843B62009298A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E58635BF14843B62009298A3 /* CookieInspector-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CookieInspector-Prefix.pch"; sourceTree = "<group>"; };
+		E58635C214843B62009298A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E58635C514843B62009298A3 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
+		E58635C714843B62009298A3 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+		E58635D114843BEE009298A3 /* nshttp_cookie.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = nshttp_cookie.rb; sourceTree = "<group>"; };
+		E58635D314843BF7009298A3 /* nshttp_cookie_storage.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = nshttp_cookie_storage.rb; sourceTree = "<group>"; };
+		E58635D514843BFF009298A3 /* cookie_inspector.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = cookie_inspector.rb; sourceTree = "<group>"; };
+		E58635D714843C07009298A3 /* CIController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = CIController.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E57E52A8147F91D800D6CD90 /* Frameworks */ = {
+		E58635AB14843B61009298A3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E57E52B0147F91D800D6CD90 /* Cocoa.framework in Frameworks */,
-				E57E52B2147F91D800D6CD90 /* MacRuby.framework in Frameworks */,
+				E58635B314843B61009298A3 /* Cocoa.framework in Frameworks */,
+				E58635B514843B61009298A3 /* MacRuby.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E57E52A0147F91D700D6CD90 = {
+		E58635A314843B61009298A3 = {
 			isa = PBXGroup;
 			children = (
-				E57E52B4147F91D800D6CD90 /* CookieInspector */,
-				E57E52AE147F91D800D6CD90 /* Frameworks */,
-				E57E52AC147F91D800D6CD90 /* Products */,
+				E58635B714843B61009298A3 /* CookieInspector */,
+				E58635B114843B61009298A3 /* Frameworks */,
+				E58635AF14843B61009298A3 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E57E52AC147F91D800D6CD90 /* Products */ = {
+		E58635AF14843B61009298A3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E57E52AB147F91D800D6CD90 /* CookieInspector.app */,
+				E58635AE14843B61009298A3 /* CookieInspector.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E57E52AE147F91D800D6CD90 /* Frameworks */ = {
+		E58635B114843B61009298A3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E57E52AF147F91D800D6CD90 /* Cocoa.framework */,
-				E57E52B1147F91D800D6CD90 /* MacRuby.framework */,
+				E58635B214843B61009298A3 /* Cocoa.framework */,
+				E58635B414843B61009298A3 /* MacRuby.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E57E52B4147F91D800D6CD90 /* CookieInspector */ = {
+		E58635B714843B61009298A3 /* CookieInspector */ = {
 			isa = PBXGroup;
 			children = (
-				E57E52C4147F91D800D6CD90 /* AppDelegate.rb */,
-				E57E52BD147F91D800D6CD90 /* Resources */,
-				E57E52C1147F91D800D6CD90 /* Other Sources */,
-				E57E52B5147F91D800D6CD90 /* Supporting Files */,
+				E58635C714843B62009298A3 /* AppDelegate.rb */,
+				E58635C014843B62009298A3 /* Resources */,
+				E58635C414843B62009298A3 /* Other Sources */,
+				E58635B814843B61009298A3 /* Supporting Files */,
 			);
 			path = CookieInspector;
 			sourceTree = "<group>";
 		};
-		E57E52B5147F91D800D6CD90 /* Supporting Files */ = {
+		E58635B814843B61009298A3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E57E52B6147F91D800D6CD90 /* CookieInspector-Info.plist */,
-				E57E52B7147F91D800D6CD90 /* InfoPlist.strings */,
-				E57E52BA147F91D800D6CD90 /* main.m */,
-				E57E52BC147F91D800D6CD90 /* CookieInspector-Prefix.pch */,
+				E58635B914843B61009298A3 /* CookieInspector-Info.plist */,
+				E58635BA14843B61009298A3 /* InfoPlist.strings */,
+				E58635BD14843B62009298A3 /* main.m */,
+				E58635BF14843B62009298A3 /* CookieInspector-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E57E52BD147F91D800D6CD90 /* Resources */ = {
+		E58635C014843B62009298A3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E57E52BE147F91D800D6CD90 /* MainMenu.xib */,
+				E58635C114843B62009298A3 /* MainMenu.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		E57E52C1147F91D800D6CD90 /* Other Sources */ = {
+		E58635C414843B62009298A3 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				E57E52C2147F91D800D6CD90 /* rb_main.rb */,
+				E58635C514843B62009298A3 /* rb_main.rb */,
+				E58635D114843BEE009298A3 /* nshttp_cookie.rb */,
+				E58635D314843BF7009298A3 /* nshttp_cookie_storage.rb */,
+				E58635D514843BFF009298A3 /* cookie_inspector.rb */,
+				E58635D714843C07009298A3 /* CIController.rb */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -109,10 +121,10 @@
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
-		E57E52B3147F91D800D6CD90 /* Deployment */ = {
+		E58635B614843B61009298A3 /* Deployment */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "--compile --embed";
-			buildConfigurationList = E57E52CB147F91D800D6CD90 /* Build configuration list for PBXLegacyTarget "Deployment" */;
+			buildConfigurationList = E58635CE14843B62009298A3 /* Build configuration list for PBXLegacyTarget "Deployment" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/local/bin/macruby_deploy;
@@ -125,13 +137,13 @@
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
-		E57E52AA147F91D800D6CD90 /* CookieInspector */ = {
+		E58635AD14843B61009298A3 /* CookieInspector */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E57E52C8147F91D800D6CD90 /* Build configuration list for PBXNativeTarget "CookieInspector" */;
+			buildConfigurationList = E58635CB14843B62009298A3 /* Build configuration list for PBXNativeTarget "CookieInspector" */;
 			buildPhases = (
-				E57E52A7147F91D800D6CD90 /* Sources */,
-				E57E52A8147F91D800D6CD90 /* Frameworks */,
-				E57E52A9147F91D800D6CD90 /* Resources */,
+				E58635AA14843B61009298A3 /* Sources */,
+				E58635AB14843B61009298A3 /* Frameworks */,
+				E58635AC14843B61009298A3 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -139,70 +151,78 @@
 			);
 			name = CookieInspector;
 			productName = CookieInspector;
-			productReference = E57E52AB147F91D800D6CD90 /* CookieInspector.app */;
+			productReference = E58635AE14843B61009298A3 /* CookieInspector.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E57E52A2147F91D700D6CD90 /* Project object */ = {
+		E58635A514843B61009298A3 /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = E57E52A5147F91D700D6CD90 /* Build configuration list for PBXProject "CookieInspector" */;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "sgonyea inc";
+			};
+			buildConfigurationList = E58635A814843B61009298A3 /* Build configuration list for PBXProject "CookieInspector" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = E57E52A0147F91D700D6CD90;
-			productRefGroup = E57E52AC147F91D800D6CD90 /* Products */;
+			mainGroup = E58635A314843B61009298A3;
+			productRefGroup = E58635AF14843B61009298A3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E57E52AA147F91D800D6CD90 /* CookieInspector */,
-				E57E52B3147F91D800D6CD90 /* Deployment */,
+				E58635AD14843B61009298A3 /* CookieInspector */,
+				E58635B614843B61009298A3 /* Deployment */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E57E52A9147F91D800D6CD90 /* Resources */ = {
+		E58635AC14843B61009298A3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E57E52B9147F91D800D6CD90 /* InfoPlist.strings in Resources */,
-				E57E52C0147F91D800D6CD90 /* MainMenu.xib in Resources */,
-				E57E52C3147F91D800D6CD90 /* rb_main.rb in Resources */,
-				E57E52C5147F91D800D6CD90 /* AppDelegate.rb in Resources */,
+				E58635BC14843B61009298A3 /* InfoPlist.strings in Resources */,
+				E58635C314843B62009298A3 /* MainMenu.xib in Resources */,
+				E58635C614843B62009298A3 /* rb_main.rb in Resources */,
+				E58635C814843B62009298A3 /* AppDelegate.rb in Resources */,
+				E58635D214843BEE009298A3 /* nshttp_cookie.rb in Resources */,
+				E58635D414843BF7009298A3 /* nshttp_cookie_storage.rb in Resources */,
+				E58635D614843BFF009298A3 /* cookie_inspector.rb in Resources */,
+				E58635D814843C07009298A3 /* CIController.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E57E52A7147F91D800D6CD90 /* Sources */ = {
+		E58635AA14843B61009298A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E57E52BB147F91D800D6CD90 /* main.m in Sources */,
+				E58635BE14843B62009298A3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E57E52B7147F91D800D6CD90 /* InfoPlist.strings */ = {
+		E58635BA14843B61009298A3 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E57E52B8147F91D800D6CD90 /* en */,
+				E58635BB14843B61009298A3 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		E57E52BE147F91D800D6CD90 /* MainMenu.xib */ = {
+		E58635C114843B62009298A3 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E57E52BF147F91D800D6CD90 /* en */,
+				E58635C214843B62009298A3 /* en */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -210,11 +230,12 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		E57E52C6147F91D800D6CD90 /* Debug */ = {
+		E58635C914843B62009298A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -236,11 +257,12 @@
 			};
 			name = Debug;
 		};
-		E57E52C7147F91D800D6CD90 /* Release */ = {
+		E58635CA14843B62009298A3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -255,7 +277,7 @@
 			};
 			name = Release;
 		};
-		E57E52C9147F91D800D6CD90 /* Debug */ = {
+		E58635CC14843B62009298A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -271,7 +293,7 @@
 			};
 			name = Debug;
 		};
-		E57E52CA147F91D800D6CD90 /* Release */ = {
+		E58635CD14843B62009298A3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -287,13 +309,13 @@
 			};
 			name = Release;
 		};
-		E57E52CC147F91D800D6CD90 /* Debug */ = {
+		E58635CF14843B62009298A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Debug;
 		};
-		E57E52CD147F91D800D6CD90 /* Release */ = {
+		E58635D014843B62009298A3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
@@ -302,32 +324,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E57E52A5147F91D700D6CD90 /* Build configuration list for PBXProject "CookieInspector" */ = {
+		E58635A814843B61009298A3 /* Build configuration list for PBXProject "CookieInspector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E57E52C6147F91D800D6CD90 /* Debug */,
-				E57E52C7147F91D800D6CD90 /* Release */,
+				E58635C914843B62009298A3 /* Debug */,
+				E58635CA14843B62009298A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E57E52C8147F91D800D6CD90 /* Build configuration list for PBXNativeTarget "CookieInspector" */ = {
+		E58635CB14843B62009298A3 /* Build configuration list for PBXNativeTarget "CookieInspector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E57E52C9147F91D800D6CD90 /* Debug */,
-				E57E52CA147F91D800D6CD90 /* Release */,
+				E58635CC14843B62009298A3 /* Debug */,
+				E58635CD14843B62009298A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		E57E52CB147F91D800D6CD90 /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
+		E58635CE14843B62009298A3 /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E57E52CC147F91D800D6CD90 /* Debug */,
-				E57E52CD147F91D800D6CD90 /* Release */,
+				E58635CF14843B62009298A3 /* Debug */,
+				E58635D014843B62009298A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E57E52A2147F91D700D6CD90 /* Project object */;
+	rootObject = E58635A514843B61009298A3 /* Project object */;
 }
