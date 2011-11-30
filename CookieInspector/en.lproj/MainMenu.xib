@@ -1430,7 +1430,6 @@
 							<string key="NSFrame">{{803, 2}, {83, 32}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:161</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="1073407283">
@@ -1464,7 +1463,7 @@
 											<string key="NSFrameSize">{900, 380}</string>
 											<reference key="NSSuperview" ref="570100351"/>
 											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="611533992"/>
+											<reference key="NSNextKeyView" ref="671690407"/>
 											<string key="NSReuseIdentifierKey">_NS:1828</string>
 											<bool key="NSEnabled">YES</bool>
 											<object class="NSTableHeaderView" key="NSHeaderView" id="354183950">
@@ -1754,7 +1753,7 @@
 							<string key="NSFrame">{{-1, 39}, {902, 398}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="671690407"/>
+							<reference key="NSNextKeyView" ref="570100351"/>
 							<string key="NSReuseIdentifierKey">_NS:1824</string>
 							<int key="NSsFlags">133682</int>
 							<reference key="NSVScroller" ref="611533992"/>
@@ -2507,14 +2506,6 @@
 					<int key="connectionID">587</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">deleteCookie:</string>
-						<reference key="source" ref="580585131"/>
-						<reference key="destination" ref="779476097"/>
-					</object>
-					<int key="connectionID">597</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">cookieSearchField</string>
 						<reference key="source" ref="580585131"/>
@@ -2529,6 +2520,14 @@
 						<reference key="destination" ref="646461181"/>
 					</object>
 					<int key="connectionID">601</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">deleteCookies:</string>
+						<reference key="source" ref="580585131"/>
+						<reference key="destination" ref="779476097"/>
+					</object>
+					<int key="connectionID">602</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -4112,7 +4111,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">601</int>
+			<int key="maxID">602</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -4143,7 +4142,7 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>deleteCookie:</string>
+							<string>deleteCookies:</string>
 							<string>reloadCookies:</string>
 							<string>searchCookies:</string>
 						</object>
@@ -4158,14 +4157,14 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>deleteCookie:</string>
+							<string>deleteCookies:</string>
 							<string>reloadCookies:</string>
 							<string>searchCookies:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBActionInfo">
-								<string key="name">deleteCookie:</string>
+								<string key="name">deleteCookies:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">

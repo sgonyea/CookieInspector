@@ -31,15 +31,14 @@ class CIController
     update_and_reload!
   end
 
-  def deleteCookie(sender)
-    index = cookiesTableView.selectedRow
+  def deleteCookies(sender)
+    rows = get_selected_rows
 
-    return if index < 0
+    rows.each do |row|
+      cookie = row['cookie']
+      delete_cookie(cookie)
+    end
 
-    row     = cookies_table[index]
-    cookie  = row['cookie']
-
-    delete_cookie(cookie)
     update_and_reload!
   end
 
