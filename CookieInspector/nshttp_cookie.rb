@@ -6,13 +6,28 @@
 #  Copyright 2011 sgonyea inc. All rights reserved.
 #
 class NSHTTPCookie
+  def to_hash
+    hash = {
+      'cookie'      => self,
+      'domain'      => domain,
+      'name'        => name,
+      'path'        => path,
+      'expires_at'  => expires_at,
+      'value'       => value
+    }
+  end
+
   def to_table
     table = {
       name => {
-        :path         => path,
-        :expiresDate  => expiresDate,
-        :value        => value
+        'path'        => path,
+        'expires_at'  => expires_at,
+        'value'       => value
       }
     }
+  end
+
+  def expires_at
+    expiresDate.to_s
   end
 end
