@@ -6,9 +6,9 @@ describe CIController do
 
   let(:cookies_table) {
     [
-      { 'domain' => '.foo.com', 'name' => 'f0o', 'expires_at' => '2999-02-01 00:00:00 -0800', 'path' => '/', 'value' => 'foo.BAT.foobar' },
-      { 'domain' => '.bar.com', 'name' => 'b4r', 'expires_at' => '2888-02-01 00:00:00 -0800', 'path' => '/', 'value' => 'bar.BAT.barbar' },
-      { 'domain' => '.baz.com', 'name' => 'b4z', 'expires_at' => '2777-02-01 00:00:00 -0800', 'path' => '/', 'value' => 'baz.BAT.bazbar' }
+      { 'cookie' => double('cookie1'), 'domain' => '.foo.com', 'name' => 'f0o', 'expires_at' => '2999-02-01 00:00:00 -0800', 'path' => '/', 'value' => 'foo.BAT.foobar' },
+      { 'cookie' => double('cookie2'), 'domain' => '.bar.com', 'name' => 'b4r', 'expires_at' => '2888-02-01 00:00:00 -0800', 'path' => '/', 'value' => 'bar.BAT.barbar' },
+      { 'cookie' => double('cookie3'), 'domain' => '.baz.com', 'name' => 'b4z', 'expires_at' => '2777-02-01 00:00:00 -0800', 'path' => '/', 'value' => 'baz.BAT.bazbar' }
     ]
   }
 
@@ -86,11 +86,43 @@ describe CIController do
   end
 
   describe '#reloadCookies' do
-    # @todo
+    it "should call #update_and_reload! (Sanity-check test)" do
+      controller.should_receive(:update_and_reload!)
+      controller.reloadCookies double("sender")
+    end
   end
 
   describe '#deleteCookies' do
-    # @todo
+    context "when deleting N selected rows" do
+      it "should remove the row(s) and update/reload the list of cookies" do
+        row = cookies_table.first
+
+        controller.should_receive(:get_selected_rows) { [row] }
+        controller.should_receive(:delete_cookie).with(row['cookie'])
+        controller.should_receive(:update_and_reload!)
+
+        controller.deleteCookies double("sender")
+      end
+    end
+  end
+
+  describe '#update_and_reload!' do
+    it "should trigger method calls in a specific order" do
+      call_stack = []
+
+      controller.should_receive(:cookie_table) {
+        call_stack << :cookie_table
+        cookies_table.reverse
+      }
+
+      controller.should_receive(:apply_sort_to_table_view)  { call_stack << :apply_sort_to_table_view }
+      controller.should_receive(:apply_search_filter)       { call_stack << :apply_search_filter }
+      controller.should_receive(:reload_data!)              { call_stack << :reload_data! }
+
+      controller.update_and_reload!
+
+      call_stack.should == [:cookie_table, :apply_sort_to_table_view, :apply_search_filter, :reload_data!]
+    end
   end
 
   describe '#preserving_selected_rows' do
