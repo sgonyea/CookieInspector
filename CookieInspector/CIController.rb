@@ -114,7 +114,7 @@ class CIController
     cookies_table.sort! do |a,b|
       a, b = b, a if not asc
 
-      a[key] <=> b[key]
+      a[key].casecmp b[key]
     end
   end
 
