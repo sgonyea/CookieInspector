@@ -5,11 +5,17 @@ describe CIController do
   let(:controller) { CIController.new }
 
   let(:cookies_table) {
-    [{ 'domain' => '.foo.com', 'name' => 'bar', 'expires_at' => '2999-02-01 00:00:00 -0800', 'path' => '/', 'value' => 'baz.bat.foobar' }]
+    [
+      { 'domain' => '.foo.com', 'name' => 'f0o', 'expires_at' => '2999-02-01 00:00:00 -0800', 'path' => '/', 'value' => 'foo.BAT.foobar' },
+      { 'domain' => '.bar.com', 'name' => 'b4r', 'expires_at' => '2888-02-01 00:00:00 -0800', 'path' => '/', 'value' => 'bar.BAT.barbar' },
+      { 'domain' => '.baz.com', 'name' => 'b4z', 'expires_at' => '2777-02-01 00:00:00 -0800', 'path' => '/', 'value' => 'baz.BAT.bazbar' }
+    ]
   }
 
   before(:each) do
     controller.cookies_table = cookies_table
+
+    controller.stub(:preserving_selected_rows).and_yield
   end
 
   describe '#tableView:objectValueForTableColumn:row' do
@@ -17,7 +23,7 @@ describe CIController do
       context "When the column name and row are valid" do
 
         it "should return the value for the given column and row index" do
-          row = cookies_table.first
+          row = cookies_table[0]
 
           row.keys.each do |key|
             column  = OpenStruct.new({:identifier => key})
@@ -32,7 +38,31 @@ describe CIController do
   end
 
   describe '#tableView:sortDescriptorsDidChange' do
-    # @todo
+    before(:each) do
+      controller.should_receive(:reload_data!)
+    end
+
+    describe 'Sorting the cookies table by a column and order' do
+      it "should case-insensitive sort the rows by the selected column" do
+        controller.should_receive(:get_sort_descriptor) {
+          OpenStruct.new({:key => 'domain', :ascending => true})
+        }
+
+        controller.tableView(double("view"), sortDescriptorsDidChange:double("old_descriptors"))
+
+        cookies_table.map{|t| t['domain']}.should == %w[.bar.com .baz.com .foo.com]
+      end
+
+      it "should sort the rows according to the order (asc/desc)" do
+        controller.should_receive(:get_sort_descriptor) {
+          OpenStruct.new({:key => 'name', :ascending => false})
+        }
+
+        controller.tableView(double("view"), sortDescriptorsDidChange:double("old_descriptors"))
+
+        cookies_table.map{|t| t['name']}.should == %w[f0o b4z b4r]
+      end
+    end
   end
 
   describe '#searchCookies' do
@@ -44,6 +74,10 @@ describe CIController do
   end
 
   describe '#deleteCookies' do
+    # @todo
+  end
+
+  describe '#preserving_selected_rows' do
     # @todo
   end
 
