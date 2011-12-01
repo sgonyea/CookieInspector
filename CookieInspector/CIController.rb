@@ -132,7 +132,7 @@ class CIController
   end
 
   def created_index_set_for_rows(rows)
-    new_indexes = NSMutableIndexSet.new
+    new_indexes = new_index_set
 
     rows.each do |row|
       index = cookies_table.index(row)
@@ -143,7 +143,17 @@ class CIController
     new_indexes
   end
 
+  def update_and_reload!
+    update_cookies_table!
+    apply_search_filter
+    reload_data!
+  end
+
   private
+  def new_index_set
+    NSMutableIndexSet.new
+  end
+
   def update_cookies_table!
     self.cookies_table  = cookie_table
 
@@ -168,11 +178,5 @@ class CIController
 
   def reload_data!
     cookiesTableView.reloadData
-  end
-
-  def update_and_reload!
-    update_cookies_table!
-    apply_search_filter
-    reload_data!
   end
 end
