@@ -13,9 +13,11 @@ describe CIController do
   }
 
   before(:each) do
-    controller.cookies_table = cookies_table
+    controller.cookies_table  = cookies_table
+    controller._cookies_table = cookies_table.dup
 
     controller.stub(:preserving_selected_rows).and_yield
+    controller.stub(:reload_data!)
   end
 
   describe '#tableView:objectValueForTableColumn:row' do
@@ -38,10 +40,6 @@ describe CIController do
   end
 
   describe '#tableView:sortDescriptorsDidChange' do
-    before(:each) do
-      controller.should_receive(:reload_data!)
-    end
-
     describe 'Sorting the cookies table by a column and order' do
       it "should case-insensitive sort the rows by the selected column" do
         controller.should_receive(:get_sort_descriptor) {
@@ -66,7 +64,25 @@ describe CIController do
   end
 
   describe '#searchCookies' do
-    # @todo
+    context "when text was entered in the Search Field" do
+      it "should filter the cookies table for the text" do
+        controller.should_receive(:search_field_value) { "foobar" }
+
+        controller.searchCookies double("sender")
+
+        controller.cookies_table.should have(1).items
+      end
+    end
+
+    context "when the Search Field is empty" do
+      it "should restore the cookies table to the full list" do
+        controller.should_receive(:search_field_value) { "" }
+
+        controller.searchCookies double("sender")
+
+        controller.cookies_table.should have(3).items
+      end
+    end
   end
 
   describe '#reloadCookies' do
@@ -84,4 +100,5 @@ describe CIController do
   describe '#apply_sort_to_table_view' do
     # @todo
   end
+
 end
