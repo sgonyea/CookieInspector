@@ -11,6 +11,7 @@ class CIController
   include CookieInspector
 
   attr_accessor :cookiesTableView, :cookieSearchField
+  attr_accessor :cookies_table, :_cookies_table
 
   def awakeFromNib
     cookiesTableView.dataSource = self
@@ -53,8 +54,12 @@ class CIController
     apply_sort_to_table_view
   end
 
+  def get_sort_descriptor
+    cookiesTableView.sortDescriptors.first
+  end
+
   def apply_sort_to_table_view
-    sort_descriptor = cookiesTableView.sortDescriptors.first
+    sort_descriptor = get_sort_descriptor
 
     return unless sort_descriptor
 
@@ -107,26 +112,24 @@ class CIController
 
   def sort_table_at_key(key, asc)
     cookies_table.sort! do |a,b|
-      if asc
-        a[key] <=> b[key]
-      else
-        b[key] <=> a[key]
-      end
+      a, b = b, a if not asc
+
+      a[key] <=> b[key]
     end
   end
 
   def get_selected_rows
-    indexes = cookiesTableView.selectedRowIndexes
-    rows    = []
-    block   = proc { |idx, stop| rows << cookies_table[idx] }
+    rows  = []
+    block = proc { |idx, stop| rows << cookies_table[idx] }
 
-    indexes.enumerateIndexesUsingBlock(block)
+    enumerate_selection_with_block(block)
 
     rows
   end
 
   def created_index_set_for_rows(rows)
     new_indexes = NSMutableIndexSet.new
+
     rows.each do |row|
       index = cookies_table.index(row)
 
@@ -147,16 +150,16 @@ class CIController
     cookies_table
   end
 
-  def cookies_table=(table)
-    @cookies_table = table
-  end
-
   def _cookies_table
-    @_cookies_table ||= update_cookies_table!
+    @_cookies_table || update_cookies_table!
   end
 
-  def _cookies_table=(table)
-    @_cookies_table = table
+  def selected_row_indexes
+    cookiesTableView.selectedRowIndexes
+  end
+
+  def enumerate_selection_with_block(block)
+    selected_row_indexes.enumerateIndexesUsingBlock(block)
   end
 
   def reload_data!
